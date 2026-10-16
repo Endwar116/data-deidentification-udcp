@@ -204,3 +204,51 @@ describe('zh-name pattern', () => {
     expect(matches('zh-name', '任何人')).toEqual([]);
   });
 });
+
+describe('biz-amount pattern (UDCP 商業機敏)', () => {
+  it('matches NT$ amounts with separators', () => {
+    expect(matches('biz-amount', '合約總價 NT$1,500,000 整')).toEqual(['NT$1,500,000']);
+  });
+  it('matches 新台幣 amounts with 萬元', () => {
+    expect(matches('biz-amount', '預算為新台幣150萬元')).toEqual(['新台幣150萬元']);
+  });
+  it('matches bare amounts ending in 元', () => {
+    expect(matches('biz-amount', '手續費 3,000元 由甲方負擔')).toEqual(['3,000元']);
+  });
+  it('does not match plain numbers without currency markers', () => {
+    expect(matches('biz-amount', '共 150 人出席，序號 20260001')).toEqual([]);
+  });
+  it('does not match 元素/元件 compounds', () => {
+    expect(matches('biz-amount', '系統包含 12元件 與 3元素')).toEqual([]);
+  });
+});
+
+describe('biz-project-code pattern (UDCP 商業機敏)', () => {
+  it('matches PROJ codes', () => {
+    expect(matches('biz-project-code', '依 PROJ-2026-001 辦理')).toEqual(['PROJ-2026-001']);
+  });
+  it('matches CASE codes', () => {
+    expect(matches('biz-project-code', '參見 CASE-0042')).toEqual(['CASE-0042']);
+  });
+  it('does not match when embedded in longer tokens', () => {
+    expect(matches('biz-project-code', 'XPROJ-2026-001Y')).toEqual([]);
+  });
+});
+
+describe('biz-employee-id pattern (UDCP 商業機敏)', () => {
+  it('matches EMP ids with and without dash', () => {
+    expect(matches('biz-employee-id', '承辦 EMP-123456，複核 EMP00421')).toEqual(['EMP-123456', 'EMP00421']);
+  });
+  it('does not match short digit runs', () => {
+    expect(matches('biz-employee-id', 'EMP-12')).toEqual([]);
+  });
+});
+
+describe('biz-client-list pattern (UDCP 商業機敏・名單式)', () => {
+  it('matches listed client names exactly', () => {
+    expect(matches('biz-client-list', '本案客戶為範例客戶甲與範例客戶乙')).toEqual(['範例客戶甲', '範例客戶乙']);
+  });
+  it('does not match unlisted names', () => {
+    expect(matches('biz-client-list', '其他客戶不在名單')).toEqual([]);
+  });
+});

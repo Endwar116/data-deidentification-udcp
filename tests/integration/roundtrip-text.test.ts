@@ -121,9 +121,12 @@ describe('sample.txt specifics', () => {
     const { mapping } = applyRedactions(original, items);
     const originals = mapping.map((m) => m.original);
 
-    for (const value of ['高雄市政府', '方法論', '任何人', 'EMP-004521']) {
+    // Fork note: EMP-004521 moved out of this list — the UDCP fork ships 員工編號
+    // (biz-employee-id) as a builtin pattern, so builtin detection now covers it.
+    for (const value of ['高雄市政府', '方法論', '任何人']) {
       expect(originals).not.toContain(value);
     }
+    expect(originals).toContain('EMP-004521');
   });
 
   it('leaves a cancelled items original in place; its code stays in the mapping only while another active item shares it', () => {

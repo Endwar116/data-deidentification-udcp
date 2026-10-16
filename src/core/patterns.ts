@@ -159,4 +159,49 @@ export const BUILTIN_PATTERNS: Pattern[] = [
     example: 'someone@example.com',
     enabled: true,
   },
+  // ── 商業機敏擴充（UDCP 類型表）── 掛於「識別碼」類別，統一代碼化處理 ──
+  {
+    id: 'biz-amount',
+    name: '金額（商業機敏）',
+    category: '識別碼',
+    source: 'builtin',
+    // 需帶貨幣標記（NT$／新台幣／…元）才命中，避免誤抓一般數字；
+    // 「元」後排除 元素／元件／元年 等常見複合詞。
+    regex:
+      '(?:NT\\$|NTD\\s?|新[台臺]幣)\\s?[\\d,]+(?:\\.\\d+)?(?:[萬億兆]?元)?' +
+      '|(?<![\\d,.])[\\d,]+(?:\\.\\d+)?\\s?[萬億兆]?元(?![素件年旦])',
+    example: 'NT$1,500,000、新台幣150萬元、3,000元',
+    enabled: true,
+  },
+  {
+    id: 'biz-project-code',
+    name: '專案代號（商業機敏）',
+    category: '識別碼',
+    source: 'builtin',
+    // 通用範本：PROJ-2026-001 / PRJ-A12 / CASE-0042；請依公司命名規則調整前綴。
+    regex: '(?<![A-Za-z0-9])(?:PROJ|PRJ|CASE)-[A-Za-z0-9]{2,}(?:-[A-Za-z0-9]+)*(?![A-Za-z0-9])',
+    example: 'PROJ-2026-001、CASE-0042',
+    enabled: true,
+  },
+  {
+    id: 'biz-employee-id',
+    name: '員工編號（商業機敏）',
+    category: '識別碼',
+    source: 'builtin',
+    regex: '(?<![A-Za-z0-9])EMP-?\\d{4,8}(?!\\d)',
+    example: 'EMP-123456、EMP00421',
+    enabled: true,
+  },
+  {
+    id: 'biz-client-list',
+    name: '客戶名單（名單式・請換成實際名單）',
+    category: '識別碼',
+    source: 'builtin',
+    // 名單式規則：客戶名稱沒有固定格式，採列舉比對。
+    // 使用方式：把下方「範例客戶」逐一換成實際客戶名稱，以 | 分隔；
+    // 名單異動時在「偵測規則」頁籤編輯此規則即可，全文自動套用。
+    regex: '(?:範例客戶甲|範例客戶乙|範例客戶丙)',
+    example: '範例客戶甲（請替換為實際客戶名稱，以 | 分隔）',
+    enabled: true,
+  },
 ];
