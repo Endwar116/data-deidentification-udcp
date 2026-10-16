@@ -9,18 +9,14 @@
     <meta name="author" content="Dean Lin" />
     <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1" />
     <meta name="theme-color" content="#2f6fed" />
-    <link rel="canonical" href="https://deanlin.net/data-deidentification/" />
-    <link rel="alternate" type="text/markdown" href="https://deanlin.net/data-deidentification/llms-full.txt" title="完整說明（Markdown，供 AI 閱讀）" />
-    <link rel="icon" type="image/png" href="https://deanlin.net/images/favicon.png" />
-    <link rel="apple-touch-icon" href="https://deanlin.net/images/favicon.png" />
+    <link rel="icon" type="image/png" href="favicon.png" />
+    <link rel="apple-touch-icon" href="favicon.png" />
 
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="文件去識別化工具" />
     <meta property="og:locale" content="zh_TW" />
-    <meta property="og:url" content="https://deanlin.net/data-deidentification/" />
     <meta property="og:title" content="免費文件去識別化工具｜PDF、Word、Excel、掃描檔個資遮罩與還原" />
     <meta property="og:description" content="資料不上傳、全程在瀏覽器內處理。自動偵測姓名、身分證、手機、地址、Email、公司、統編，支援 PDF（含掃描檔 OCR）、Word、Excel，保留原格式輸出；可用 CSV 編碼表還原，也可只輸出 [姓名] 或 ○○○。" />
-    <meta property="og:image" content="https://deanlin.net/data-deidentification/og.png" />
     <meta property="og:image:type" content="image/png" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
@@ -29,241 +25,10 @@
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="免費文件去識別化工具｜PDF、Word、Excel、掃描檔個資遮罩與還原" />
     <meta name="twitter:description" content="資料不上傳、全程在瀏覽器內處理。自動偵測姓名、身分證、手機、地址、Email、公司、統編，支援 PDF（含掃描檔 OCR）、Word、Excel，保留原格式輸出；可用 CSV 編碼表還原，也可只輸出 [姓名] 或 ○○○。" />
-    <meta name="twitter:image" content="https://deanlin.net/data-deidentification/og.png" />
     <meta name="twitter:image:alt" content="文件去識別化工具：契約書中的姓名、身分證、手機、地址、公司與統編以遮罩呈現" />
 
     <!-- FAQPage answers must stay word-for-word identical to the visible #faq content below. -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@graph": [
-        {
-          "@type": "WebSite",
-          "@id": "https://deanlin.net/data-deidentification/#website",
-          "url": "https://deanlin.net/data-deidentification/",
-          "name": "文件去識別化工具",
-          "alternateName": "Data De-identification Tool",
-          "inLanguage": "zh-Hant-TW",
-          "publisher": { "@id": "https://deanlin.net/#person" }
-        },
-        {
-          "@type": "WebPage",
-          "@id": "https://deanlin.net/data-deidentification/#webpage",
-          "url": "https://deanlin.net/data-deidentification/",
-          "name": "免費文件去識別化工具｜PDF、Word、Excel、掃描檔個資遮罩與還原",
-          "description": "免費、免安裝、資料不上傳的線上文件去識別化工具：自動偵測 PDF（含掃描檔）、Word、Excel、TXT 中的姓名、身分證、手機、地址、Email、公司、統編並遮罩，人工覆核後下載；可用 CSV 編碼表完整還原，也可只輸出 [姓名] 或 ○○○。全程在瀏覽器內處理。",
-          "inLanguage": "zh-Hant-TW",
-          "datePublished": "2026-09-02",
-          "dateModified": "__BUILD_DATE__",
-          "isPartOf": { "@id": "https://deanlin.net/data-deidentification/#website" },
-          "about": { "@id": "https://deanlin.net/data-deidentification/#app" },
-          "mainEntity": { "@id": "https://deanlin.net/data-deidentification/#app" },
-          "primaryImageOfPage": {
-            "@type": "ImageObject",
-            "url": "https://deanlin.net/data-deidentification/og.png",
-            "width": 1200,
-            "height": 630
-          },
-          "author": { "@id": "https://deanlin.net/#person" }
-        },
-        {
-          "@type": "WebApplication",
-          "@id": "https://deanlin.net/data-deidentification/#app",
-          "name": "文件去識別化工具",
-          "alternateName": "Data De-identification Tool",
-          "url": "https://deanlin.net/data-deidentification/",
-          "image": "https://deanlin.net/data-deidentification/og.png",
-          "screenshot": "https://deanlin.net/data-deidentification/og.png",
-          "description": "純前端的文件去識別化工具：上傳 PDF、Word、Excel、TXT、Markdown 或貼上文字，自動偵測個人資料並遮罩，下載去識別化文件與 CSV 編碼表，可完整還原。所有處理在瀏覽器內完成，檔案不會上傳。",
-          "applicationCategory": "UtilitiesApplication",
-          "applicationSubCategory": "Data de-identification / PII redaction",
-          "operatingSystem": "Any (Web browser)",
-          "browserRequirements": "Requires JavaScript",
-          "inLanguage": "zh-Hant-TW",
-          "isAccessibleForFree": true,
-          "offers": { "@type": "Offer", "price": "0", "priceCurrency": "TWD" },
-          "license": "https://opensource.org/licenses/MIT",
-          "datePublished": "2026-09-02",
-          "keywords": "去識別化, 個資遮罩, 資料脫敏, PII redaction, de-identification, PDF, Word, Excel",
-          "featureList": [
-            "支援 PDF（含掃描檔，瀏覽器內 OCR）、Word (.docx)、Excel (.xlsx)、TXT、Markdown 與貼上文字，一次最多 10 個檔案",
-            "自動偵測姓名、身分證字號、手機、市話、地址、電子郵件、公司名稱、統一編號、自訂識別碼",
-            "格式感知預覽、遮罩顯示、人工覆核（取消誤判、整批取消、圈選新增）",
-            "保留原格式輸出，輸出檔不殘留原始敏感文字；PDF 以文字重建而非色塊覆蓋",
-            "掃描 PDF 重繪表格框線、底色與勾選框，傾斜或放反的頁面自動轉正",
-            "輸出方式：部分保留（方便統計）、全部隱藏、自訂",
-            "標記方式：可還原的編碼（附 CSV 編碼表），或不需還原的類別標記 [姓名]、○ 佔位",
-            "純前端處理，資料不離開瀏覽器，可離線與自行架設"
-          ],
-          "softwareHelp": { "@type": "CreativeWork", "url": "https://github.com/dean9703111/data-deidentification#readme" },
-          "author": { "@id": "https://deanlin.net/#person" }
-        },
-        {
-          "@type": "SoftwareSourceCode",
-          "@id": "https://github.com/dean9703111/data-deidentification#source",
-          "name": "data-deidentification",
-          "codeRepository": "https://github.com/dean9703111/data-deidentification",
-          "programmingLanguage": "TypeScript",
-          "runtimePlatform": "Web browser",
-          "license": "https://opensource.org/licenses/MIT",
-          "targetProduct": { "@id": "https://deanlin.net/data-deidentification/#app" },
-          "author": { "@id": "https://deanlin.net/#person" }
-        },
-        {
-          "@type": "HowTo",
-          "@id": "https://deanlin.net/data-deidentification/#howto",
-          "name": "如何把 PDF、Word、Excel 文件去識別化（遮罩個資）",
-          "description": "使用免費的文件去識別化工具，在瀏覽器內自動偵測並遮罩文件中的個人資料，檔案不會上傳。",
-          "inLanguage": "zh-Hant-TW",
-          "totalTime": "PT3M",
-          "tool": [
-            {
-              "@type": "HowToTool",
-              "name": "文件去識別化工具（網頁瀏覽器）"
-            }
-          ],
-          "step": [
-            {
-              "@type": "HowToStep",
-              "position": 1,
-              "name": "上傳文件",
-              "text": "在「去識別化」頁籤拖入 PDF、Word、Excel、TXT、Markdown 檔案或貼上文字，按「開始去識別化」。掃描的 PDF 會先在瀏覽器內以 OCR 辨識文字。",
-              "url": "https://deanlin.net/data-deidentification/#site-info"
-            },
-            {
-              "@type": "HowToStep",
-              "position": 2,
-              "name": "檢視自動偵測結果",
-              "text": "在依原格式排版的預覽中檢視自動標記的姓名、身分證字號、手機、地址、電子郵件等個資；滑鼠停留可看原文與實際輸出標記。",
-              "url": "https://deanlin.net/data-deidentification/#site-info"
-            },
-            {
-              "@type": "HowToStep",
-              "position": 3,
-              "name": "人工覆核",
-              "text": "點擊標記取消誤判、在「輸出方式」的類別表整類取消、圈選文字新增漏抓的項目。",
-              "url": "https://deanlin.net/data-deidentification/#site-info"
-            },
-            {
-              "@type": "HowToStep",
-              "position": 4,
-              "name": "選擇輸出方式與標記方式",
-              "text": "輸出方式決定露出多少（部分保留、全部隱藏、自訂）；標記方式決定要不要還原（可還原的編碼，或不需還原的類別標記 [姓名]、○ 佔位）。",
-              "url": "https://deanlin.net/data-deidentification/#site-info"
-            },
-            {
-              "@type": "HowToStep",
-              "position": 5,
-              "name": "下載",
-              "text": "下載去識別化文件（與上傳相同格式）；使用編碼時一併下載 CSV 編碼表，多個檔案可打包成 ZIP。",
-              "url": "https://deanlin.net/data-deidentification/#site-info"
-            },
-            {
-              "@type": "HowToStep",
-              "position": 6,
-              "name": "需要時還原",
-              "text": "在「還原」頁籤上傳去識別化文件與編碼表，即可下載還原檔。",
-              "url": "https://deanlin.net/data-deidentification/#site-info"
-            }
-          ]
-        },
-        {
-          "@type": "FAQPage",
-          "@id": "https://deanlin.net/data-deidentification/#faq",
-          "mainEntity": [
-            {
-              "@type": "Question",
-              "name": "什麼是文件去識別化？",
-              "acceptedAnswer": { "@type": "Answer", "text": "文件去識別化是把文件中可以直接或間接辨識特定個人的資訊（例如姓名、身分證字號、手機、地址、電子郵件），以遮罩或編碼取代，讓文件在交給第三方、AI 服務或研究單位時不會洩漏個資。本工具會把每筆敏感資訊換成唯一的隨機編碼，並產出 CSV 編碼表供日後還原。" }
-            },
-            {
-              "@type": "Question",
-              "name": "我的檔案會被上傳到伺服器嗎？",
-              "acceptedAnswer": { "@type": "Answer", "text": "不會。文件解析、個資偵測、遮罩與輸出全部在你的瀏覽器內以 JavaScript 完成，沒有任何後端；載入頁面後即使離線也能使用。瀏覽器只會儲存你的偵測規則設定，文件內容與編碼表都不會落地。" }
-            },
-            {
-              "@type": "Question",
-              "name": "支援哪些檔案格式？",
-              "acceptedAnswer": { "@type": "Answer", "text": "支援 PDF（含掃描檔，會在瀏覽器內以 OCR 辨識文字）、Word（.docx）、Excel（.xlsx）、TXT、Markdown，也可以直接貼上文字。單檔上限 100 MB，一次最多 10 個檔案混合處理。不支援舊版 .doc、.xls。" }
-            },
-            {
-              "@type": "Question",
-              "name": "可以偵測哪些個人資料？",
-              "acceptedAnswer": { "@type": "Answer", "text": "內建九種類別：中文姓名、身分證字號（含檢核碼驗證）、手機、市話、地址、電子郵件、公司／組織名稱、統一編號（含檢核碼驗證）與自訂識別碼；也可以用正規表達式新增自訂規則。規則以台灣常見格式為主。" }
-            },
-            {
-              "@type": "Question",
-              "name": "去識別化、假名化、匿名化有什麼不同？",
-              "acceptedAnswer": { "@type": "Answer", "text": "去識別化是泛稱，指處理後無法直接識別特定個人。假名化（pseudonymization）是以代號取代可識別的資料、另外保存對照表，必要時可以還原，本工具預設的「編碼」加上 CSV 編碼表就屬於這一類；匿名化（anonymization）則是處理到無法再回推個人、也無法還原。選「類別」或「空白佔位」不會產生編碼表，但是否達到匿名化，還要看保留的字元與文件中的其他資訊，交付前請自行判斷。" }
-            },
-            {
-              "@type": "Question",
-              "name": "把文件交給 ChatGPT 等 AI 之前，要怎麼移除個資？",
-              "acceptedAnswer": { "@type": "Answer", "text": "把文件拖進本工具或直接貼上文字，確認姓名、身分證、手機、地址、Email 等都已標記，再下載或複製去識別化後的內容交給 AI。AI 看到的是 [姓名]、[手機] 這類標記，仍能理解語意；整個過程在瀏覽器內完成，原始檔案不會上傳。預設的「編碼」會讓 AI 的回覆保留 [姓名:6e679d] 這類標記，之後可以用編碼表還原成真實資料；不需要還原時，把「標記方式」改為「類別」即可。" }
-            },
-            {
-              "@type": "Question",
-              "name": "掃描的 PDF 或紙本掃描檔可以去識別化嗎？",
-              "acceptedAnswer": { "@type": "Answer", "text": "可以。沒有文字層的 PDF 會在瀏覽器內以 OCR（繁體中文＋英文）辨識，再自動偵測與遮罩；表格框線、底色、勾選框與文字顏色依原位置重繪，傾斜或放反的頁面會先自動轉正。以內附的 5 頁掃描範例實測，字元召回率約 99%。辨識仍可能有誤，下載前請逐頁核對。" }
-            },
-            {
-              "@type": "Question",
-              "name": "可以一次處理多個檔案嗎？",
-              "acceptedAnswer": { "@type": "Answer", "text": "可以。一次最多 10 個檔案，PDF、Word、Excel、TXT、Markdown 可以混合，每個檔案各自預覽與覆核，最後一鍵打包成 ZIP 下載；也可以讓整批檔案共用編碼，同一個人在不同檔案中是同一個編碼。" }
-            },
-            {
-              "@type": "Question",
-              "name": "去識別化後可以還原嗎？",
-              "acceptedAnswer": { "@type": "Answer", "text": "可以。每筆敏感資訊都換成 [類別:編碼] 形式的唯一標記，對應關係存在 CSV 編碼表中。在「還原」頁籤上傳去識別化文件與編碼表，即可取得原格式的還原檔。編碼表是還原的唯一憑證，請妥善保管。" }
-            },
-            {
-              "@type": "Question",
-              "name": "不需要還原，可以只遮蔽、不要編碼嗎？",
-              "acceptedAnswer": { "@type": "Answer", "text": "可以。在「輸出方式」面板的「標記方式」改選「類別」，輸出寫成 [姓名]、[手機]；或選「空白佔位」，像公文一樣以「○」取代每個字（分隔符號保留，例如 0912-○○○-○○○）。這兩種方式只下載去識別化文件、不產生編碼表，日後無法還原；「空白佔位」會保留原本的字數，需要更高的匿名性請選「類別」。預設的「編碼」仍可還原。" }
-            },
-            {
-              "@type": "Question",
-              "name": "去識別化後的資料還能拿來統計嗎？",
-              "acceptedAnswer": { "@type": "Answer", "text": "可以。預覽上方的「輸出方式」預設為「部分保留」，只露出適合統計的字元，例如身分證前 2 碼（地區與性別）、Email 網域、地址的縣市區，輸出如 A1[身分證:a3f9c2]；改選「自訂」可以逐類別調整，在 Excel 用 LEFT／RIGHT 就能分組統計，仍可用編碼表完整還原。多個檔案可以選擇整批共用編碼，或匯入上次的編碼表沿用舊編碼，讓同一個人在不同檔案中是同一個編碼。保留的字元越多越容易辨識出個人，請視接收對象斟酌。" }
-            },
-            {
-              "@type": "Question",
-              "name": "輸出的文件會保留原本的格式嗎？",
-              "acceptedAnswer": { "@type": "Answer", "text": "Word 與 Excel 直接改寫文字節點，樣式、表格、頁首頁尾與工作表結構都保留；PDF 依原始座標重建文字版面並內嵌中文字型，但圖片、圖形與原字型不會保留。" }
-            },
-            {
-              "@type": "Question",
-              "name": "PDF 為什麼不是用黑框蓋住敏感文字？",
-              "acceptedAnswer": { "@type": "Answer", "text": "用色塊覆蓋的 PDF，底層文字仍然可以被複製或擷取出來。本工具改以文字重建的方式輸出 PDF，敏感文字會真正從檔案中移除，不會殘留在輸出檔內。" }
-            },
-            {
-              "@type": "Question",
-              "name": "自動偵測會不會有誤判或漏抓？",
-              "acceptedAnswer": { "@type": "Answer", "text": "會。中文姓名與地址無法靠規則做到零誤判、零漏抓，所以自動偵測只是建議：預覽畫面可以點擊標記取消誤判、在類別表整類取消，或圈選文字手動新增漏抓的項目，確認後再下載。" }
-            },
-            {
-              "@type": "Question",
-              "name": "這個工具要收費嗎？可以自行架設嗎？",
-              "acceptedAnswer": { "@type": "Answer", "text": "完全免費，並以 MIT 授權開源。執行 npm run build 產出的 dist/ 是純靜態網站，可以放到 GitHub Pages、內網檔案伺服器或任何靜態空間自行架設，也可以直接以檔案方式開啟。" }
-            }
-          ]
-        },
-        {
-          "@type": "Person",
-          "@id": "https://deanlin.net/#person",
-          "name": "Dean Lin",
-          "url": "https://deanlin.net/",
-          "sameAs": [
-            "https://medium.com/@dean-lin",
-            "https://www.facebook.com/deanlinbao",
-            "https://www.threads.com/@deanlin5288",
-            "https://www.youtube.com/@dlcorner",
-            "https://github.com/dean9703111"
-          ]
-        }
-      ]
-    }
-    </script>
+    
   </head>
   <body>
     <div id="app">
@@ -271,7 +36,7 @@
       <main class="seo-fallback">
         <h1>文件去識別化工具</h1>
         <p>純前端、資料不出電腦的文件去識別化工具。上傳 PDF、Word、Excel、TXT、Markdown 或貼上文字，自動偵測姓名、身分證字號、手機、市話、地址、電子郵件、公司名稱、統一編號與自訂識別碼；預覽、人工覆核後下載去識別化文件與 CSV 編碼表，之後可完整還原。</p>
-        <noscript><p>本工具需要啟用 JavaScript 才能運作。原始碼與說明：<a href="https://github.com/dean9703111/data-deidentification">github.com/dean9703111/data-deidentification</a></p></noscript>
+        <noscript><p>本工具需要啟用 JavaScript 才能運作。原始碼與說明：<a href="https://github.com/Endwar116/data-deidentification-udcp">github.com/Endwar116/data-deidentification-udcp</a></p></noscript>
       </main>
       <!-- Static "about / how-to / FAQ" content: readable without JavaScript; the app keeps it below the panels after mount. -->
       <section id="site-info" class="site-info" aria-labelledby="site-info-title">
@@ -392,7 +157,7 @@
           <h3 lang="en">In English</h3>
           <p lang="en">Data De-identification Tool is a free, open-source, browser-only tool for redacting personal data (PII) in Traditional Chinese (Taiwan) documents. It detects names, national ID numbers, mobile and landline numbers, addresses, email addresses, company names and tax IDs in PDF (including scanned PDFs, read with in-browser OCR), Word, Excel, TXT and Markdown files, lets you review every match, and exports the redacted file in its original format. Each value becomes a reversible code with a CSV mapping table, or a plain category label or ○ placeholders when no restoring is needed. Files never leave your browser.</p>
 
-          <p class="muted small">完整操作說明與截圖見 <a href="https://github.com/dean9703111/data-deidentification#readme" target="_blank" rel="noopener">GitHub 專案頁</a>；範例檔皆為程式產生的虛構資料。給 AI 的網站摘要：<a href="llms.txt">llms.txt</a>、<a href="llms-full.txt">llms-full.txt</a>。最後更新：<time datetime="__BUILD_DATE__">__BUILD_DATE__</time></p>
+          <p class="muted small">完整操作說明與截圖見 <a href="https://github.com/Endwar116/data-deidentification-udcp#readme" target="_blank" rel="noopener">GitHub 專案頁</a>；範例檔皆為程式產生的虛構資料。給 AI 的網站摘要：<a href="llms.txt">llms.txt</a>、<a href="llms-full.txt">llms-full.txt</a>。最後更新：<time datetime="__BUILD_DATE__">__BUILD_DATE__</time></p>
         </div>
       </section>
     </div>
